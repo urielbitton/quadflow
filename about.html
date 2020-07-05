@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>About | Quadflow - Generate Your Website Content</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="images/logo.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="index.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+
+</head>
+
+<body ng-app="">
+	  
+    <nav>
+        <div class="grid">
+            <div class="logo"><img src="images/logo.png"/><h4>Quadflow</h4></div>
+            <div class="menu">
+                <a href="index.html">Home <hr><div></div></a>
+                <a href="apps.html">Apps <hr><div></div></a>    
+                <a href="templates.html">Templates <hr><div></div></a> 
+                <a href="about.html" style="color: var(--color)">About Us <hr><div style="opacity: 1;"></div></a>
+                <a href="index.html#contact">Contact <hr><div></div></a> 
+            </div>
+            <div class="navbtns"> 
+                <div class="account"><i class="fas fa-user-alt"></i></div>
+                <a href="index.html#gen"><button class="getstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+                <div class="mobbtn">
+                <hr><hr>
+                </div> 
+            </div>  
+        </div>  
+    </nav>    
+     
+    <div class="mobslide">
+        <div class="mobmenu">
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>   
+            <a href="templates.html">Templates</a>  
+            <a href="about.html">About Us</a> 
+            <a href="index.html#contact">Contact</a>
+        </div>
+         <div class="mobaccount"><i class="fas fa-user-alt"></i></div>
+        <a href="index.html#gen"><button class="mobgetstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+    </div>
+    <div class="spacerl"></div>
+    <div class="grid xgrid">  
+        <div class="gensec section">
+            <h2>About Us</h2>
+            <h6>Find out who we are and the idea behind Quadflow.</h6>
+            
+            <div class="spacer"></div>
+            <div class="about">
+                <div class="aboutleft">
+                    <h2>The Idea Behind Quadflow</h2>
+                    <p>The design for quadflow evolved from the inspiration of fully generated beautiful and responsive website pages. This idea further evolved to primarily generate website text content which we found was quite a big necessity for web designers and developers. <br><br>
+                    Web designers and especially website owners often lack the text or are not sure what to write and where in their multi-page website. To address this need, Quadflow was born.</p>
+                </div>
+                <div class="aboutright">
+                    <img src="images/behanceimg.jpg"/>
+                </div>
+                <div class="clear"></div> 
+                <div class="aboutleft abl2"> 
+                    <img src="images/who.jpg"/>
+                </div>
+                <div class="aboutright">
+                    <h2>Who We Are</h2>
+                    <p>We are a team of software and app developers. Specialized in web apps, we have provided numerous software and web app solutions for a wide array of companies and freelancers.<br><br> 
+                    We design websites as well and provide tech support for a number of firms and individuals. When it comes to passion, we have a knack for minimalist design, which we incorporate in most of our web and app designs.<br> Finally, we enjoy writing which is what fueled the creation of Quadflow. Combined with our passion for design, the inspiration for dynamically generated web content led to this web app.</p>
+                </div>
+                <div class="clear"></div> 
+                <div class="behance">
+                    <img class="behanceimg" src="images/behancebg.png"/>
+                    <h2>Behance Portfolio</h2>
+                    <a href="https://behance.net/scorpionedge" target="_blank"><img class="bemulti" src="images/behancemulti.jpg"/></a>
+                </div>
+                <div class="spacer"></div> 
+                <div class="contacts">
+                    <h2>Design Services Contacts</h2>
+                    <p>Some of our other designing services.</p>
+                    <a href="https://scorpionedge.com" target="_blank">
+                    <div class="contactbtn">
+                        <img src="images/selogo.png"/>
+                        <small>Scorpion Edge <span>&rarr;</span></small>    
+                    </div>
+                    </a>    
+                    <a href="https://flexrweb.com" target="_blank">
+                    <div class="contactbtn">
+                        <img src="images/flexrlogo.png"/>
+                        <small>Flexr Designs <span>&rarr;</span></small>
+                    </div>
+                    </a>
+                    <a href="https://urielbitton.design" target="_blank">
+                    <div class="contactbtn">
+                        <img src="images/qelogo.png"/>
+                        <small>Quantumize <span>&rarr;</span></small>
+                    </div> 
+                    </a>     
+                </div>
+                <div class="aboutsocials">
+                    <h2>Social Networks</h2>
+                    <p>Discover our social profiles below.</p>
+                    <a href="https://www.facebook.com/quadflowapp" target="_blank"><i class="fab fa-facebook-f"></i></a>    
+                    <a href="https://twitter.com/Quadflow1" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://behance.net/scorpionedge" target="_blank"><i class="fab fa-behance"></i></a>
+                    <a href="https://instagram.com/scorpionedge" target="_blank"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div ng-include="'footer.html'"></div>
+    
+    </body>
+</html>    

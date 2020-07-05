@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>QuantumX Enhance</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Roboto;
+}
+
+#grid {
+    position: relative;
+    width: 1200px;
+    height: auto;
+    margin: auto;
+}
+
+#navbar {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    z-index: 900;
+}
+#mainmenu {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 600px;
+    text-align: center;
+}
+#mainmenu a {
+    position: relative;
+    color: #d1d1d1;
+    font-weight: 900;
+    font-size: 14px;
+    text-decoration: none;
+    margin: auto 10px;
+    transition: all 0.3s;
+    padding: 5px;
+}
+#mainmenu a:hover {
+    color: white;
+}
+
+#logodiv {
+    position: relative;
+    top: 10px;
+    width: 145px;
+}
+#logodiv:hover h2 {
+    color: white;
+}
+#logodiv:hover #logo {
+    color: white;
+}
+ 
+#logodiv i {
+    position: absolute;
+    top: -10px;
+    font-size: 40px;
+    color: #d1d1d1;
+    font-size: 28px;
+    padding: 10px;
+    padding-left: 0px;
+    transition: all 0.3s;
+}
+#logodiv h2 {
+    position: absolute;
+    top: -1px;
+    margin: 0;
+    left: 35px;
+    font-size: 25px;
+    color: #d1d1d1;
+    transition: all 0.3s;
+}
+#logodiv span {
+    background-image: linear-gradient(to right top, #ff16e1, #e503e4, #c900e7, #a904e9, #8312eb);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+#searchdiv {
+    position: absolute;
+    top: 14px;
+    right: 0px;
+}
+#searchdiv i {
+    position: absolute;
+    top: 3px;
+    font-size: 14px;
+    color: #888;
+    left: 127px;
+    cursor: pointer;
+}
+#searchdiv input {
+    border-radius: 25px;
+    border: none;
+    height: 20px;
+    padding-left: 10px;
+    outline:none;
+}
+
+#share {
+    position: absolute;
+    top: 7px;
+    right: 260px;
+    cursor: pointer;
+}
+#sharecircle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #d1d1d1;
+    transition: all 0.3s;
+}
+#share i {
+    font-size: 18px;
+    color: #d1d1d1;
+    padding: 7px;
+    transition: all 0.3s;
+}
+
+#share:hover #sharedrop {
+    opacity: 1;
+    visibility: visible;
+}
+#share:hover #sharecircle {
+    border: 2px solid white;
+}
+#share:hover .fa-share-alt {
+    color: white;
+}
+
+#sharedrop {
+    position: absolute;
+    top: 43px;
+    left: -50px;
+    width: 120px;
+    height: auto;
+    padding: 30px 10px;
+    background-color: rgba(0,0,0,0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+#sharedrop p {
+    position: absolute;
+    width: 100px;
+    margin: 10px auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    color: #d1d1d1;
+    font-weight: 900;
+}
+#sharedrop a {
+    position: relative;
+    display: block;
+    margin: 5px auto;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    width: 80px;
+}
+#sharedrop i {
+    font-size: 15px;
+    color: #d1d1d1;
+    transition: all 0.3s;
+}
+#sharedrop i:hover {
+    color: white;
+}
+
+
+
+
+
+h1 {
+    position: absolute;
+    margin: 250px auto auto auto;
+    background-image: linear-gradient(to right top, #ff16e1, #e503e4, #c900e7, #a904e9, #8312eb);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    font-weight: 100;
+    font-size: 60px;
+    z-index: 2;
+    text-transform: uppercase;
+}
+#h1span {
+    color: #333 !important;
+    background: none;
+    font-weight: 600;
+    position: absolute;
+    top: 320px;
+    font-size: 60px;
+    z-index: 2;
+    text-transform: uppercase;
+}
+#bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 100%);
+    z-index: 1;
+    overflow-x: hidden;
+}
+#bgdiag {
+    position: absolute;
+    clip-path: polygon(75% 0, 100% 0, 100% 100%, 27% 100%);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right top, #ff16e1, #ce53f5, #996dfd, #5f7bf9, #1283eb);
+    opacity: 0.3;
+    z-index: 1;
+}
+button {
+    position: absolute;
+    top: 410px;
+    border: none;
+    width: 150px;
+    height: 45px;
+    border-radius: 25px;
+    color: white;
+    background-image: linear-gradient(to right top, #ff16e1, #e503e4, #c900e7, #a904e9, #8312eb);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+button:hover {
+    box-shadow: 0px 10px 34px -12px rgba(0,0,0,0.75);
+}
+
+#dragon {
+    position: absolute;
+    top: 180px;
+    font-size: 40px;
+    background-image: linear-gradient(to right top, #ff16e1, #e503e4, #c900e7, #a904e9, #8312eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#phone {
+    position: absolute;
+    top: 120px;
+    left: 500px;
+    z-index: 10;
+    width: 800px;
+    height: 500px;
+}
+
+hr {
+    position: absolute;
+    top: 520px;
+    width: 80px;
+    border: none;
+    height: 2px;
+    background-image: linear-gradient(to right top, #ff16e1, #e503e4, #c900e7, #a904e9, #8312eb);
+}
+h4 {
+    position: absolute;
+    top: 530px;
+    color: #999;
+    font-family: Roboto;
+    font-weight: 800;
+}
+p {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 900;
+    caret-color: #333;
+    width: 400px;
+    line-height: 1.6;
+    top: 570px;
+}
+
+#readmore {
+    position: absolute;
+    top: 700px;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+#readmore:hover {
+    color: #777;
+    border-bottom: 1px solid #777;
+}
+	</style>
+	</head>
+    
+	<body>
+        
+        <div id="navbar">
+            <div id="grid">
+                <a href="#">
+                <div id="logodiv"> 
+                    <i id="logo" class="fab fa-phoenix-squadron"></i>
+                    <h2><span>Q</span>uantum</h2>
+                </div>
+                </a>    
+                <div id="mainmenu">
+                    <a href="#">Home</a>
+                    <a href="#">Tech</a>
+                    <a href="#">About</a>
+                    <a href="#">Phones</a>
+                    <a href="#">Consultations</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div id="searchdiv">
+                <input type="text" name="textfield">
+                <i class="fas fa-search"></i>
+                </div>
+                
+                
+                <div id="share">
+                    <div id="sharecircle">
+                    <i class="fas fa-share-alt"></i>
+                    </div> 
+                    
+                    <div id="sharedrop">
+                        <p>Follow us on</p>
+                        <div style="height: 10px"></div>
+                        <a href="#"><i class="fa">&#xf09a;</i></a>
+                        <a href="#"><i class="fa">&#xf099;</i></a> 
+                        <a href="#"><i class='fab'>&#xf0e1;</i></a>
+                        <a href="#"><i class='fab'>&#xf281;</i></a>
+                    </div> 
+                </div>
+                
+            </div>    
+        </div>
+        
+        
+        
+        <div id="bg">
+        <div id="bgdiag"></div>    
+        <div id="grid">    
+        <h1>The power of</h1>
+        <span id="h1span">Quantum</span>     
+        <button>Discover Now&emsp;<i class="fas fa-chevron-right"></i></button> 
+        <i id="dragon" class="fab fa-phoenix-squadron"></i>    
+        <img id="phone" src="phone.png">
+        <h4>Experience Enhacement</h4>    
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>      
+        <a id="readmore" href="#">Read More</a>    
+        <hr>    
+        </div> 
+        </div>    
+	</body> 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Services | Quadflow - Generate Your Website Content</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="images/logo.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script> 
+    <script src="comps.js"></script>
+ 
+</head>
+ 
+<body ng-app=""> 
+	  
+    <nav>
+        <div class="grid">
+            <div class="logo"><img src="images/logo.png"/><h4>Quadflow</h4></div>
+            <div class="menu">
+                <a href="index.html">Home <hr><div></div></a>
+                <a href="apps.html" style="color: var(--color)">Apps <hr><div style="opacity: 1;"></div></a>   
+                <a href="templates.html">Templates <hr><div></div></a> 
+                <a href="about.html">About Us <hr><div></div></a> 
+                <a href="index.html#contact">Contact <hr><div></div></a> 
+            </div>
+            <div class="navbtns"> 
+                <div class="account"><i class="fas fa-user-alt"></i></div>
+                <a href="index.html#gen"><button class="getstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+                <div class="mobbtn">
+                <hr><hr>
+                </div>
+            </div> 
+        </div>  
+    </nav>   
+     
+    <div class="mobslide">
+        <div class="mobmenu">
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>   
+            <a href="templates.html">Templates</a>  
+            <a href="about.html">About Us</a> 
+            <a href="index.html#contact">Contact</a>
+        </div>
+         <div class="mobaccount"><i class="fas fa-user-alt"></i></div>
+        <a href="index.html#gen"><button class="mobgetstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+    </div>
+    <div class="spacerl"></div>
+    <div class="grid xgrid">  
+        <div class="gensec section">
+            <h2>Apps</h2>
+            <h6>We offer a few services to complement quick and convenient web design solutions.</h6>
+            
+            <div class="spacer"></div>
+            <div class="genbox">
+                <img src="https://img.icons8.com/cute-clipart/64/000000/hiragana-ma.png"/>
+                <h4>Text Generator</h4>
+                <p>Generate text content for your website and pages to accelerate your design process.</p>
+                <a href="index.html#gen"><button class="gencomp1">Get Started</button></a>
+            </div>
+            <div class="genbox"> 
+                <img src="https://img.icons8.com/cute-clipart/64/000000/one-page.png"/>
+                <h4>Page Generator</h4>
+                <p>Generate ready made web pages that are fully customizable and responsive.</p>
+                <a href="#comp2"><button class="gencomp2">Get Started</button></a>
+            </div>
+            <div class="genbox">
+                <img src="https://img.icons8.com/cute-clipart/64/000000/book.png"/>
+                <h4>Components Library</h4>
+                <p>Discover our pre-designed components for all web solutions. Made for developers.</p>
+                <a href="#comp3"><button class="gencomp3">Get Started</button></a>
+            </div> 
+            <div class="genbox"> 
+                <img src="https://img.icons8.com/cute-clipart/64/000000/typewriter-with-paper.png"/>
+                <h4>Content Writing</h4>
+                <p>We also manually write text content which we provide as a website service.</p>
+                <a href="#comp4"><button class="gencomp4">Get Started</button></a>
+            </div>
+            <div class="spacer"></div>
+            
+            <div class="comp comp2" id="comp2">
+                <div ng-include="'comp2.html'"></div>
+            </div>  
+            <div class="comp comp3" id="comp3">    
+                <h2>Library Coming Soon</h2>
+                <br>
+                <a href="#comp3"><button class="comp3close">Close</button></a>
+            </div> 
+            <div class="comp comp4" id="comp4">  
+                <img src="images/writer.jpg"/>
+                <h3>Content Writing</h3>
+                <p>You can request content writing services for your website. We  provide writing text content for your website projects, fill out the form below to get started on a project.</p>
+                <button class="comp4start">Get Started</button> 
+                <form class="compform" action="compform.php" method="post">
+                    <input type="name" placeholder="Name" name="name">
+                    <input type="email" placeholder="Email" name="mail">
+                    <input placeholder="Type of Website" name="type">
+                    <select name="selects">
+                    <option value="choose" disabled selected>Choose a Style</option>
+                    <option value="modern">Modern</option>
+                    <option value="serious">Serious</option>
+                    <option value="light">Light Tone</option>
+                    <option value="creative">Creative</option> 
+                    </select>
+                    <textarea placeholder="Additional Information" name="info"></textarea>
+                    <button type="submit" name="submit">Submit</button>
+                    
+                    <div class="success formmsg">Thank you for your submission. We will be in touch with you shortly.</div>
+                    <div class="errormsg formmsg">There is an error with your submission. Please make sure your email is valid.</div>
+                </form> 
+            </div> 
+             
+             
+        </div>   
+    </div>
+    
+     
+    <div ng-include="'footer.html'"></div>
+    
+    </body>
+</html>    

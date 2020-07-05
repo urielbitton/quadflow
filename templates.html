@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Templates | Quadflow - Generate Your Website Content</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="images/logo.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="index.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+
+</head>
+ 
+<body ng-app=""> 
+	  
+    <nav> 
+        <div class="grid">
+            <div class="logo"><img src="images/logo.png"/><h4>Quadflow</h4></div>
+            <div class="menu">
+                <a href="index.html">Home <hr><div></div></a>
+                <a href="apps.html">Apps <hr><div></div></a>   
+                <a href="templates.html" style="color: var(--color)">Templates <hr><div style="opacity: 1;"></div></a> 
+                <a href="about.html">About Us <hr><div></div></a> 
+                <a href="index.html#contact">Contact <hr><div></div></a> 
+            </div>
+            <div class="navbtns"> 
+                <div class="account"><i class="fas fa-user-alt"></i></div>
+                <a href="index.html#gen"><button class="getstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+                <div class="mobbtn">
+                <hr><hr>
+                </div>
+            </div> 
+        </div> 
+    </nav>   
+       
+    <div class="mobslide">
+        <div class="mobmenu">
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>   
+            <a href="templates.html">Templates</a>  
+            <a href="about.html">About Us</a> 
+            <a href="index.html#contact">Contact</a>
+        </div>
+         <div class="mobaccount"><i class="fas fa-user-alt"></i></div>
+        <a href="index.html#gen"><button class="mobgetstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+    </div>
+    <div class="spacerl"></div>
+    <div class="grid xgrid">  
+        <div class="gensec section">
+            <h2>Templates</h2>
+            <h6>Discover our modern & responsive full web page templates.</h6>
+            <div class="spacer"></div>
+             
+            <div class="tempbox">
+                <img src="images/temps/hexagonal.JPG"/>
+                <h4>Hextra</h4>
+                <a href="components/temps/hextra.html" download>Download</a>
+            </div>
+            <div class="tempbox"> 
+                <img src="images/temps/verilium.JPG"/>
+                <h4>Verilium</h4>
+                <a href="components/temps/verilium.html" download>Download</a>
+            </div>
+            <div class="tempbox">
+                <img src="images/temps/exotech.JPG"/>
+                <h4>Exotech</h4>
+                <a href="components/temps/exotech.html" download>Download</a>
+            </div>
+            <div class="tempbox">
+                <img src="images/temps/quantum.JPG"/>
+                <h4>Quantum</h4>
+                <a href="components/temps/quantum.html" download>Download</a>
+            </div>
+            <div class="tempbox">
+                <img src="images/temps/reflex.JPG"/>
+                <h4>Reflex</h4>
+                <a href="components/temps/reflex.html" download>Download</a>
+            </div>
+             <div class="tempbox"> 
+                <img src="images/temps/quad.JPG"/>
+                 <h4>Quad</h4>
+                 <a href="#">Download</a>
+            </div>
+               
+            
+            <h4>More Templates Coming Soon</h4>
+        </div>
+    </div>  
+    
+    
+    <div ng-include="'footer.html'"></div>
+    
+    </body>
+</html>    

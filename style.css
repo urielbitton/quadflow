@@ -1,0 +1,1631 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Montserrat, sans-serif;
+}
+
+:root {
+    --color: #8b05e8;
+}
+.grid {
+    position: relative;
+    margin: auto;
+    width: 1300px;
+}
+.xgrid {
+    padding: 50px 0px;
+}
+::selection {
+    background: none;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #eee; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color);
+} 
+
+.clear {
+    clear: both;
+}
+h1,h2,h3,h4,h5,h6,p,i,button,li,span,a, .section {
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+p {
+    line-height: 1.8;
+}
+button {
+    outline: none;
+    transition: all 0.3s;
+    background: none;
+    border: 2px solid var(--color);
+    padding: 8px 15px;
+    color: var(--color);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+button:hover {
+    background: var(--color);
+    border-color: var(--color);
+    color: white;
+}
+
+.spacer {
+    height: 50px;
+}
+.spacerl {
+    height: 100px;
+}
+
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: #ebeff2;
+    z-index: 900;
+    transition: all 0.4s;
+}
+.logo {
+    position: relative;
+    margin-right: 80px;
+    float: left;
+    top: 10px;
+    transition: all 0.4s;
+}
+.logo img {
+    position: relative;
+    top: 15px;
+    float: left;
+    height: 70px;
+    transition: all 0.4s;
+}
+.logo h4 {
+    float: left;
+    font-size: 25px;
+    font-weight: 900;
+    color: #555;
+    margin-left: 20px;
+    transition: all 0.4s;
+}
+.menu {
+    position: relative;
+    top: 45px;
+    float: left;
+    transition: all 0.4s;
+}
+.menu a {
+    color: black;
+    margin: auto 15px;
+    padding: 5px 0px;
+    height: 30px;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-block;
+}
+.menu a:hover {
+    color: var(--color);
+}  
+.menu hr {
+    position: absolute;
+    border: none;
+    width: 0;
+    left: 0;
+    background: var(--color);
+    height: 2px;
+    transition: all 0.4s;
+}
+.menu a:hover hr {
+    animation: slide 0.8s;
+}
+@keyframes slide {
+    0%{left: 0%;width: 0%;}
+    40%{left: 0;width: 100%;}
+    50%{left:0%;width: 100%;}
+    100%{left:100%;width: 0;}
+}
+.menu div {
+    position: absolute;
+    opacity: 0;
+    top: -45px;
+    width: 100%;
+    height: 4px;
+    background: var(--color);
+    transition: all 0.3s;
+}
+.navbtns {
+    position: relative;
+    float: right;
+    top: 47px;
+    transition: all 0.4s;
+}
+.navbtns div {
+    margin: auto 20px;
+}
+.mobbtn {
+    position: relative;
+    display: none;
+    float: right;
+    top: -7px;
+    padding: 10px;
+    width: 20px;
+    background: var(--color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.mobbtn:hover {
+    filter: brightness(120%);
+}
+.mobbtn hr {
+    position: relative;
+    border: none;
+    background: white;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+}
+.account {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    top:-5px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.account:hover {
+    background: var(--color);
+}
+.account:hover i {
+    color: white;
+}
+.account i {
+    font-size: 17px;
+    color: white;
+    color: var(--color);
+    transition: all 0.3s;
+}
+.navbtns button {
+    top: -5px;
+}
+.navbtns button i {
+    margin-right: 5px;
+}
+.navbtns button:hover {
+    background: var(--color);
+    border-color: var(--color);
+    color: white;
+}
+.mobslide {
+    position: fixed;
+    top: 100px;
+    height: 0px;
+    width: 100%;
+    background: #ebeff2;
+    transition: all 0.5s;
+    z-index: 950;
+    text-align: center;
+    overflow: hidden;
+}
+.mobmenu {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.mobmenu a {
+    display: block;
+    color: black;
+    font-weight: 500;
+    padding: 5px 0px;
+    margin: 10px auto;
+    font-size: 17px;
+}
+.mobaccount {
+    color: var(--color);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.mobgetstarted {
+    background: var(--color);
+    color: white;
+    height: 40px;
+    margin-bottom: 20px;
+} 
+.mobgetstarted i {
+    margin-right: 10px;
+}
+
+
+.bg {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/bgimg3.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg h1 {
+    font-size: 55px;
+    text-align: left;
+    margin-bottom: 0px;
+    font-weight: 500;
+    margin-top: 100px;
+}    
+.bg h1 span {
+    color: var(--color);
+    font-weight: 600;
+}
+.hidescroll {
+    text-align: left;
+    width: 40%;
+}
+.hidescroll p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+.hidescroll button i {
+    transition: all 0.2s;
+    margin-left: 5px;
+}
+.hidescroll button:hover i {
+    margin-left: 12px;
+} 
+
+.s1 {
+    text-align: left;
+    padding-bottom: 80px;
+}
+.section h3 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.s1 h6 {
+    font-size: 16px;
+    color: var(--color);
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.box {
+    position: relative;
+    width: 24%;
+    margin: 5px;
+    height: 50vh;
+    text-align: center;
+    background: #fafafa;
+    display: inline-table;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    padding: 40px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.box:hover {
+    background: #f5f5f5;
+}
+.box img {
+    position: relative;
+    margin-top: 50px;
+}
+.box i {
+    font-size: 30px;
+    color: #aaa;
+}
+.box h4 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 20px;
+     transition: all 0.3s;
+} 
+.box p {
+    font-size: 14px;
+    color: #333;
+    height: 65px;
+    line-height: 2;
+    transition: all 0.3s;
+}  
+.closebtncont {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
+}
+.closebtn {
+    width: 150px;
+}
+.hiddenbox {
+    position: relative;
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    margin-top: 40px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+.hiddenbox i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: white;
+}
+.sidebar {
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #f1f1f1;
+    box-sizing: border-box;
+    overflow: hidden;
+} 
+.hidetitle {
+    display: block;
+    font-size: 22px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.ht2 {
+    margin-top: 0px;
+}
+.sidebar ul {
+    position: relative;
+    overflow-y: scroll;
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+    margin: auto;
+    transition: all .4s;
+}
+.sidebar ul::-webkit-scrollbar {
+    width: 8px;
+}
+.hidecont {
+    position: relative;
+    float: right;
+    width: 80%;
+    height: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.sidebar h5 {
+    text-align: left;
+    color: #555;
+    margin: auto;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s; 
+}
+.sidebar h5:hover {
+    background: #eee;
+}
+.hidecont .hidetitle {
+    text-align: center;
+}
+.generatebtn {
+    position: relative;
+    background: var(--color);
+    color: white;
+    text-transform: uppercase;
+    z-index: 10;
+    margin-top: 50px;
+}
+.generatebtn:hover {
+    background: none;
+    color: var(--color);
+}
+.generatebtn:hover i {
+    color: var(--color);
+} 
+.inserttemplate {
+    position: relative;
+    height: 90%;
+    left: 0;
+    transition: all 0.2s;
+} 
+.slidecont {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 76%;
+    text-align: center;
+    transition: all 0.7s;
+    padding-bottom: 90px;
+} 
+.slideshow {
+    position: relative;
+    text-align: center;
+    float: left;
+    width:20%;
+    margin: auto;
+    transition: all 0.7s;
+} 
+.slideshow h3 {
+    font-weight: 400;
+    padding: 0px 40px;
+    color: var(--color);
+}
+.slideshow input {
+    width: 80%;
+    height: 60px;
+    font-size: 27px;
+    color: #333;
+}
+.prev {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #bbb;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: none;
+}
+.next {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    color: #bbb;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: none;
+}
+.prev:hover, .next:hover {
+    color: var(--color);
+}
+.gencontentdiv {
+    position: relative;
+    width: 85%;
+    margin: auto;
+    overflow-y: scroll;
+    height: 80%;
+    padding: 0px 20px;
+    text-align: left;
+}
+.genbtndiv {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 30px;
+    display: none;
+    transition: all 0.3s;
+    z-index: 100;
+}
+.genbtn {
+    position: relative;
+    top: 0px;
+    margin: 20px; 
+    padding: 5px 10px;
+    color: white;
+    background: var(--color);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.dlbtn {
+    position: relative;
+    top: 0px;
+    display: inline-block;
+    width: 105px;
+    height: 19px;
+    margin: auto;
+}
+ 
+.genbtn:hover{
+    filter: brightness(120%);
+}
+.genbtn i {
+    margin-left: 10px;
+} 
+.subbtn {
+    position: relative;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    top: 5px;
+    left: 0px;
+    display: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    background: var(--color);
+    transition: all 0.3s;
+    border-bottom: 1px solid #6c00b8;
+} 
+.subbtn:hover {
+    filter: brightness(110%);
+}
+.styles {
+    position: absolute;
+    transition: all 0.5s;
+    display: none;
+    text-align: left;
+}
+.styles i {
+    color: #aaa;
+    padding: 20px;
+    font-size: 25px;
+    text-align: left;
+    cursor: pointer;
+}
+.styles i:hover {
+    background: #f1f1f1;
+}
+.boxnot form {
+    position: relative;
+    display: none;
+    top: -20px;
+    transition: all 0.4s;
+}
+
+
+
+
+
+.s2 {
+    text-align: center;
+}
+.s2 img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(30%);
+}
+.s2 h3 {
+    color: white;
+}
+.tri {
+    position: relative;
+    display: inline-table;
+    margin: 20px 40px;
+    text-align: center;
+    width: 300px;
+}
+.tri i {
+    font-size: 40px;
+    color: white;
+}
+.tri h4 {
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+}
+.tri p {
+    color: #ccc;
+    font-size: 14px;
+} 
+
+
+
+.s3 {
+    background: #f1f1f1;
+}
+.s3 form {
+    text-align: center; 
+}
+.s3 ul {
+    background: var(--color);
+    padding: 20px 40px;
+    width: 350px;
+    list-style-type: none;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 50px;
+}
+.s3 ul li {
+    margin: 10px auto;
+    color: white;
+}
+.s3 ul i {
+    margin-right: 10px;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid var(--color);
+    background: none;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    width: 200px;
+    margin: 60px 10px;
+    outline: none;
+}
+
+.s3 textarea {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid var(--color);
+    background: none;
+    width: 430px;
+    max-width: 430px;
+    min-width: 430px;
+    min-height: 50px;
+    outline: none;
+}
+.s3 form button {
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 430px;
+}
+
+  
+footer {
+    background: var(--color);
+    width: 100%;
+}
+footer p, footer a {
+    margin: auto;
+    color: white;
+    font-size: 14px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.footleft {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+.footleft a:hover {
+    text-decoration: underline;
+}
+.footright {
+    position: relative;
+    float: right;
+}
+.footright a {
+    margin: auto 10px;
+}
+.footright a i {
+    font-size: 20px;
+}
+
+.footlogo {
+    top: -10px;
+    height: 50px;
+    position: relative;
+    float: left;
+    margin-right: 30px;
+}
+
+.gensec {
+    position: relative;
+    width: 100%;
+    background: #fafafa;
+    margin: auto;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+.gensec h2 {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.gensec h6 {
+    font-size: 15px;
+    color: #aaa;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+
+
+/*Services CSS */
+.genbox {
+    position: relative;
+    width: 40%;
+    margin: 20px;
+    display: inline-table;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+.genbox:hover {
+    background: #f5f5f5;
+}
+.genbox:hover button {
+    visibility: visible;
+    opacity: 1;
+}
+.genbox h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #555;
+}
+.genbox p {
+    font-size: 14px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.genbox button {
+    border-color: #333;
+    color: #333;
+    visibility: hidden;
+    opacity: 0;
+}
+.genbox button:hover {
+    border-color: var(--color);
+    color: white;
+}
+.comp {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    display: none;
+    transition: all 0.3s;
+}
+.comp4 {
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    overflow: hidden;
+}
+.comp4 img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+    left: 0px;
+}
+.comp4 h3 {
+    color: #f1f1f1;
+    font-weight: 400;
+    margin: auto;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.comp4 p {
+    margin: auto;
+    margin-top: 20px;
+    color: #e1e1e1;
+    width: 70%;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+.comp4 button {
+    border-color: #f1f1f1;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+}
+.comp4 button:hover {
+    background: #f1f1f1;
+    color: black;
+}
+.compform {
+    position: relative;
+    z-index: 100;
+    padding: 20px 0px;
+    display: none;
+}
+.comp4 input, .comp4 select, .comp4 textarea {
+    display: block;
+    margin: 40px auto;
+    border-color: #f1f1f1;
+    box-sizing: border-box;
+    width: 400px;
+    color: #f1f1f1;
+}
+.comp4 select, .comp4 textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #f1f1f1;
+    color: #f1f1f1;
+    outline: none;
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 400px;
+}
+.comp4 select {
+    padding-bottom: 10px;
+    color: #777;
+}
+.comp4 select option {
+    color: black;
+}
+.compform button {
+    margin-bottom: 50px;
+}
+
+
+.compapp {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    overflow: hidden;
+}
+.compappbtn {
+    margin-top: 50px;
+}
+.appleft, .appright {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+}
+.appleft {
+    width: 25%; 
+    height:80%;
+    border-right: 1px solid #f1f1f1;
+}
+.appright {
+    width: 75%;
+    height: auto;
+    overflow-y: scroll;
+}
+.appleft h5 {
+    text-align: left;
+    padding: 10px 0px;
+    width: 100%;
+    margin: auto;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #777;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 20;
+}
+.appleft h5:hover {
+    background: #f5f5f5;
+}
+.appleft li:hover i {
+    opacity: 1;
+}
+
+.appleft i {
+    float: right;
+    top: 0px;
+    margin-right: 30px;
+    font-size: 20px;
+    color: #ccc;
+    z-index: 30;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.appleft ul {
+    list-style-type: none;
+    height: 100%;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.appleft > ul > li > ul {
+    position: relative;
+    transition: all 0.5s;
+    height: 0px;
+}
+.appleft > ul > li > ul h6 {
+    text-align: left;
+    margin: auto;
+    padding: 5px 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding-left: 30px;
+}
+.appleft > ul > li > ul h6:hover {
+    background: #fafafa;
+}
+
+.compapp ::-webkit-scrollbar {
+    width: 0px;
+}
+.compapp h3 {
+    font-size: 25px;
+    margin-top: 0px;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px 0px;
+}
+.apppool a {
+    position: relative;
+    float: left;
+    width: 120px;
+    height: 120px;
+    background: #fafafa;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin: 5px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.apppool a:hover {
+    background: #f5f5f5;
+}
+.apppool img {
+    position: relative;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.apppool a h4 {
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+}
+.appright h2 {
+    margin-top: 20%;
+    font-weight: 300;
+    color: #aaa;
+} 
+.formmsg {
+    position: relative;
+    margin-top: 50px;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-size: 14px;
+    padding: 7px;
+    display: none;
+}
+.success {
+    background: var(--color);
+}
+.errormsg {
+    background: #fc0362;
+}
+  
+   
+
+/* Templates CSS */
+.tempbox {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 30px;
+    display: inline-table;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    transition: all 0.4s;
+    text-align: center;
+}
+.tempbox:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+.tempbox:hover img {
+    opacity: 0.1;
+    transform: scale(1.05);
+    filter: blur(2px);
+}
+.tempbox img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    object-fit: cover;
+}
+.tempbox h4 {
+    visibility: hidden;
+    top: 10px;
+    opacity: 0;
+    font-size: 30px;
+    font-weight: 400;
+    transition: opacity 0.3s, top 0.6s;
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+}
+.tempbox a {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    bottom: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    padding: 10px 0px;
+}
+.tempbox:hover h4, .tempbox:hover a  {
+    visibility: visible;
+    opacity: 1;
+}
+.tempbox:hover h4 {
+    top: 0px;
+}
+.tempbox:hover a {
+    bottom: 50px;
+}
+
+ 
+/*Terms Pages CSS */
+
+.terms {
+    text-align: left;
+    width: 700px;
+    margin: auto;
+}
+.terms h2 {
+    text-align: left;
+}
+.terms p {
+    font-size: 14px;
+    line-height: 2;
+    margin: 10px auto;
+}
+.terms a {
+    color: black;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.terms ul {
+    list-style-type: square;
+}
+.terms ul li {
+    line-height: 2;
+    font-size: 14px;
+}
+
+
+ 
+/*About CSS */
+.about {
+    text-align: left;
+}
+.about h2 {
+    text-align: left;
+}
+.aboutleft, .aboutright {
+    position: relative;
+    width: 45%;
+    margin: 30px auto;
+}
+.aboutleft {
+    float: left;
+}
+.aboutright {
+    float: right;
+}
+.aboutright h2, .aboutright p {
+    text-align: right;
+}
+.aboutright img, .aboutleft img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.about p {
+    color: #999;
+}
+.behance {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 30px auto;
+}
+.behanceimg {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+}
+.behance h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.bemulti {
+    position: relative;
+    width: 90%;
+    opacity: 0.5;
+    transition: all 0.4s;
+    cursor: pointer;
+    filter: grayscale(40%);
+}
+.bemulti:hover {
+    opacity: 0.8;
+    filter: grayscale(0);
+}
+
+.contacts {
+    position: relative;
+    text-align: center;
+}
+.contacts h2 {
+    text-align: center;
+}
+.contacts p {
+    margin-bottom: 30px;
+}
+.contactbtn {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    border-radius: 8px;
+    background: #f1f1f1;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin: 20px;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.contactbtn:hover {
+    background: #eaeaea;
+}
+.contactbtn img {
+    position: relative;
+    width:25px;
+    height: 25px;
+    top: 3px;
+}
+.contacts a {
+    color: black;
+}
+.contactbtn small {
+    position: relative;
+    top: -3px;
+    left: 20px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.contactbtn span {
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+    opacity: 0;
+    font-size: 20px;
+    transition: all 0.4s;
+}
+.contactbtn:hover span {
+    margin-left: 10px;
+    opacity: 1;
+}
+.contactbtn:hover small {
+    left: 25px;
+}
+.aboutsocials {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}
+.aboutsocials h2 {
+    text-align: center;
+}
+.aboutsocials p {
+    margin-bottom: 50px;
+}
+.aboutsocials a {
+    margin: 20px;
+}
+.aboutsocials a:hover i {
+    color: var(--color);
+}
+.aboutsocials i {
+    font-size: 25px;
+    color: black;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+
+
+/*Support CSS */
+.accleft, .accright {
+    position: relative;
+    width: 45%;
+    margin: 20px;
+}
+.accleft {
+    float: left;
+}
+.accright {
+    float: right;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin: 5px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+.active, .accordion:hover {
+    background-color: #ddd;
+    color: #444;
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    text-align: left;
+    font-size: 13px;
+    transition: max-height 0.2s ease-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+.panel a {
+    font-weight:500;
+    color:var(--color);
+}
+.panelcaret {
+    float: right;
+    font-size: 18px;
+    color: #444;
+    transition: all 0.4s;
+}
+.supp small {
+    top: 0px;
+}
+.sitemapbtn {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding: 10px 15px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s;
+}
+.sitemapbtn:hover {
+    background: #eaeaea;
+}
+.sitemapbtn:hover small {
+    opacity: 1;
+    top: -30px;
+}
+.sitemapbtn small {
+    position: absolute;
+    width: 70px;
+    top: -25px;
+    left: 0px;
+    padding: 5px;
+    background: rgba(0,0,0,0.7);
+    color: #f1f1f1;
+    font-size: 10px;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+
+  
+
+/* Sitemap CSS */
+
+Sitemap {
+    position: relative;
+    width: 700px;
+    text-align: left;
+}
+Sitemap h5 {
+    font-size: 25px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 50px;
+}
+Sitemap url {
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f1f1f1;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+Sitemap url:hover {
+    background: #eaeaea;
+}
+Sitemap url a {
+    font-weight: 500;
+    color: #333;
+    display: block;
+}
+Sitemap url loc, Sitemap url lastmod, Sitemap url priority {
+    opacity: 0;
+    position: absolute;
+}
+Smlink a {
+    color: black;
+    font-weight: 600;
+}
+Smlink a:hover {
+    text-decoration: underline;
+}
+
+ 
+
+
+
+
+
+@media (max-width:1320px) {
+    .grid {
+        width: 97%;
+    }
+    .box {
+        width: 32.3%;
+    }
+}
+@media (max-width: 1220px) {
+    .box {
+        margin: auto;
+        width: 33.1%;
+    } 
+}
+@media (max-width:1080px) {
+    .menu, .logo h4 {
+        display: none;
+    }
+    .box {
+        width: 49.7%;
+    }
+    .footleft, .footright {
+        width: 100%;
+        margin: 50px auto;
+        float: none;
+        text-align: center;
+    }
+    .footleft img {
+        float: none;
+        margin: auto;
+        height: 80px;
+    }
+    .hiddenbox {
+        width: 100%;
+    }
+    .mobbtn {
+        display: block;
+    }
+    .genbox button {
+        opacity: 1;
+        visibility: visible;
+    }
+    .aboutleft, .aboutright {
+        width: 100%;
+        text-align: left;
+    }
+    .aboutleft h2, .aboutright h2, .aboutleft p, .aboutright p {
+        text-align: left;
+    }
+    .bemulti {
+        width: 100%;
+    }
+    .accdiv {
+        position: relative;
+        width: 90%;
+        margin: auto;
+    }
+    .accleft, .accright {
+        width: 100%;
+        margin: auto;
+    }
+    
+    
+}
+
+@media (max-width:820px) {
+    .sidebar {
+        width: 100%;
+        height: 300px;
+    }
+    .sidebar h5 {
+        text-align: center;
+    }
+    .hidecont {
+        width: 100%;
+        height: auto;
+    } 
+    .ht2 {
+        border-top: 1px solid #f1f1f1;
+        padding-top: 20px;
+    }
+    .s1 .spacerl {
+        display: none
+    }
+    .hiddenbox {
+        height: 100%;
+    }
+    .terms, .sitemap {
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    .compapp {
+        height: auto;
+    }
+    .appleft, .appright {
+        width: 100%;
+        padding-bottom: 80px;
+        float: none;
+    }
+    .appright {
+        height: 500px;
+    }
+    .appleft {
+        height: 300px;
+    }
+    .inserttemplate {
+        height: 400px;
+    }
+    
+}
+
+@media (max-width:660px) {
+    .bg {
+        background-image: url(images/bgimgmob.jpg);
+    }
+    .bg h1 {
+        text-align: center;
+        margin: auto;
+    }
+    .hidescroll {
+        margin: auto;
+        width: 90%;
+        text-align: center;
+    }
+    .hidescroll p {
+        font-size: 17px;
+    }
+    .hidescroll button {
+        padding: 15px 20px;
+    }
+    .slideshow input {
+        width: 90%;
+    }
+    .box {
+        width: 100%;
+        margin: 5px auto;
+    }
+    .footright a {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 0px;
+    }
+    .footleft p {
+        width: 350px;
+    }
+    .account, .getstarted {
+        display: none;
+    }
+    .genbox {
+        width: 90%; 
+    }
+    .comp4 input, .comp4 select, .comp4 textarea {
+        width: 90%;
+        min-width: 90%;
+        max-width: 90%;
+    }
+    .gensec {
+        padding: 50px 0px;
+    }
+    .appright h2 {
+        margin-top: 40%;
+    }
+    .tempbox {
+        margin: 40px auto;
+        width: 90%;
+        height: 400px;
+    }
+    .tempbox img {
+        height: 250px;
+        position: relative;
+        display: block;
+    }
+    .tempbox:hover img {
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1;
+    }
+    .tempbox h4 {
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        top: auto;
+        transform: translateY(0);
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    .tempbox a {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        top: 0px;
+        margin-top: 20px;
+    }
+    .terms, .sitemap {
+        text-align: center;
+    }
+    .terms h2 {
+        text-align: center;
+    }
+    .aboutleft h2, .aboutright h2, .aboutleft p, .aboutright p {
+        text-align: center;
+    }
+    .bemulti {
+        filter: grayscale(0%);
+    }
+    
+     
+}
+@media (max-width:500px) {
+    .success {
+        width: 90%;
+    }
+}
+@media (max-width:450px) {
+    
+    .s3 form {
+        width: 95%;
+    }
+    .s3 textarea, .s3 input {
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
+        margin: 20px auto;
+    }
+    .s3 button {
+        max-width: 200px;
+    }
+    .s3 ul {
+        width: 90%;
+        padding: 20px 0px;
+    }
+    .s3 ul li {
+        margin-left: 20px;
+    }
+    .tri {
+        width: 90%;
+        margin: 40px auto;
+    }
+}
+
+@media (max-width:360px) {
+    .s3 ul {
+        width: 90%;
+    }
+    .footleft p {
+        width: 90%;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
+
+

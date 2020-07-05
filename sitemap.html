@@ -1,0 +1,136 @@
+<?xml-stylesheet type="text/css" href="style.css"?>
+<?xml-script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"?>
+
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Quadflow - Generate Your Website Content</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="images/logo.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+
+</head> 
+
+<body ng-app=""> 
+
+    <nav>
+        <div class="grid">
+            <div class="logo"><img src="images/logo.png"/><h4>Quadflow</h4></div>
+            <div class="menu">
+                <a href="index.html" style="color: var(--color)">Home <hr><div style="opacity: 1"></div></a>
+                <a href="services.html">Services <hr><div></div></a>   
+                <a href="templates.html">Templates <hr><div></div></a> 
+                <a href="about.html">About Us <hr><div></div></a> 
+                <a href="#contact">Contact <hr><div></div></a> 
+            </div>
+            <div class="navbtns"> 
+                <div class="account"><i class="fas fa-user-alt"></i></div>
+                <a href="index.html#gen"><button class="getstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+                <div class="mobbtn">
+                <hr><hr>
+                </div> 
+            </div>
+        </div>      
+    </nav>   
+     
+    <div class="mobslide">
+        <div class="mobmenu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>   
+            <a href="templates.html">Templates</a>  
+            <a href="about.html">About Us</a> 
+            <a href="#contact">Contact</a>
+        </div>
+         <div class="mobaccount"><i class="fas fa-user-alt"></i></div>
+        <a href="index.html#gen"><button class="mobgetstarted"><i class="fas fa-stream"></i> Get Started</button></a>
+    </div>
+
+<div class="spacerl"></div>
+    <div class="grid xgrid">  
+        <div class="gensec section">
+            <h2>Sitemap</h2>
+            <h6>The sitemap of our web  pages links.</h6>
+             
+            
+            <Sitemap>
+            <urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        
+            <h5>Home</h5>    
+            <url>
+              <loc>https://quadflowapp.com/</loc>
+              <lastmod>2020-05-06T20:44:30+00:00</lastmod>
+              <priority>1.00</priority>
+                <a href="https://quadflowapp.com">Quadflow</a>    
+            </url>
+            <url>
+              <loc>https://quadflowapp.com/index.html</loc>
+              <lastmod>2020-05-06T20:44:30+00:00</lastmod>
+              <priority>0.80</priority>
+                <a href="https://quadflowapp.com/index.html">Home</a> 
+            </url>
+            <h5>Pages</h5>    
+            <url>
+              <loc>https://quadflowapp.com/services.html</loc>
+              <lastmod>2020-05-06T20:09:52+00:00</lastmod>
+              <priority>0.80</priority>
+                <a href="https://quadflowapp.com/services.html">Services</a> 
+            </url>
+            <url>
+              <loc>https://quadflowapp.com/templates.html</loc>
+              <lastmod>2020-05-06T17:17:54+00:00</lastmod>
+              <priority>0.80</priority>
+                <a href="https://quadflowapp.com/templates.html">Templates</a>
+            </url>
+            <url> 
+              <loc>https://quadflowapp.com/about.html</loc>
+              <lastmod>2020-05-07T03:42:14+00:00</lastmod>
+              <priority>0.80</priority>
+                <a href="https://quadflowapp.com/about.html">About Us</a>
+            </url>
+            <h5>Info Links</h5>    
+            <url>
+              <loc>https://quadflowapp.com/disclaimer.html</loc>
+              <lastmod>2020-05-07T03:42:14+00:00</lastmod>
+              <priority>0.80</priority>
+                <a href="https://quadflowapp.com/disclaimer.html">Disclaimer</a>
+            </url>  
+            <url>
+              <loc>https://quadflowapp.com/privacy.html</loc>
+              <lastmod>2020-05-07T03:42:14+00:00</lastmod>
+              <priority>0.80</priority>
+                <a href="https://quadflowapp.com/privacy.html">Privacy</a>
+            </url>       
+            <url>
+              <loc>https://quadflowapp.com/support.html</loc>
+              <lastmod>2020-05-07T03:42:14+00:00</lastmod>
+              <priority>0.80</priority>
+                <a href="https://quadflowapp.com/support.html">Support</a>
+            </url>
+            <h5>Contact</h5>     
+            <Smlink><p>For all inquiries please contact us at  the following email address <a href="mailto:support@quadflowapp.com">support@quadflowapp.com</a></p></Smlink>    
+                
+
+            </urlset>
+             
+            </Sitemap>
+            
+        </div>
+    </div>     
+    
+    <Sfooter ng-include="'footer.html'"></Sfooter>
+    
+    </body>
+</html>    
